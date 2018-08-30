@@ -1,0 +1,10 @@
+---
+- name: Build and Deploy todolist-api 
+  hosts: app
+  vars:
+    ci_cd_namespace: cmr-ci-cd
+    dev_namespace: cmr-dev
+    test_namespace: cmr-test
+  tasks:
+    - include_role:
+        name: openshift-applier/roles/openshift-applier
