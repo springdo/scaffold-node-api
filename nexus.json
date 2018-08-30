@@ -1,5 +1,5 @@
 {
-  "name": "zip",
+  "name": "labs-static",
   "type": "groovy",
-  "content": "repository.createRawHosted('zip')"
+  "content": "repository.createRawHosted('labs-static')"
 }
