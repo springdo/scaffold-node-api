@@ -6,7 +6,7 @@ const router = express.Router();
 
 const controller = require('./todo.controller');
 
-router.get('/', controller.index);
+router.get('/', function(req, res, next){  }, controller.index);
 router.get('/:id', controller.show);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
