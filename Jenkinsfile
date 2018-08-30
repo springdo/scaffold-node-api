@@ -14,9 +14,9 @@ pipeline {
         JOB_NAME = "${JOB_NAME}".replace("/", "-")
 
         GIT_SSL_NO_VERIFY = true
-        GIT_CREDENTIALS = credentials('jenkins-git-creds')
-        GITLAB_DOMAIN = "gitlab.apps.lader.rht-labs.com"
-        GITLAB_PROJECT = "<GIT_USERNAME>"
+        // GIT_CREDENTIALS = credentials('jenkins-git-creds')
+        // GITLAB_DOMAIN = ""
+        // GITLAB_PROJECT = "<GIT_USERNAME>"
     }
 
     // The options directive is for configuration that applies to the whole job.
@@ -102,8 +102,9 @@ pipeline {
                 success {
                     echo "Git tagging"
                     sh'''
-                        git tag -a ${JENKINS_TAG} -m "JENKINS automated commit"
-                        git push https://${GIT_CREDENTIALS_USR}:${GIT_CREDENTIALS_PSW}@${GITLAB_DOMAIN}/${GITLAB_PROJECT}/${APP_NAME}.git --tags
+                        echo "TODO - Reenable this at some stage"
+                        # git tag -a ${JENKINS_TAG} -m "JENKINS automated commit"
+                        # git push https://${GIT_CREDENTIALS_USR}:${GIT_CREDENTIALS_PSW}@${GITLAB_DOMAIN}/${GITLAB_PROJECT}/${APP_NAME}.git --tags
                     '''
                 }
                 failure {
