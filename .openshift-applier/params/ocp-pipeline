@@ -1,0 +1,3 @@
+PIPELINE_SOURCE_REPOSITORY_URL=https://github.com/springdo/scaffold-node-api.git
+PIPELINE_SOURCE_REPOSITORY_REF=develop
+NAME=todolist-fe
